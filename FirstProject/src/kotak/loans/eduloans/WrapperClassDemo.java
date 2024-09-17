@@ -12,7 +12,7 @@ public class WrapperClassDemo
 		int  i1 = 10;
 		System.out.println(i1);
 		
-		Integer i2 = new Integer(20);
+		Integer i2 = Integer.valueOf(i1);
 		System.out.println(i2);
 		
 		Integer i3 = 30;
