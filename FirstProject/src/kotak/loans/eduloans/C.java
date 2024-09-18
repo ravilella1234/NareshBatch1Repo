@@ -8,6 +8,11 @@ public class C extends A
 	{
 		System.out.println("iam m3 from C");
 	}
+	
+	public void m1()
+	{
+		System.out.println("iam m1 overriden  from B");
+	}
 
 	public static void main(String[] args) 
 	{
