@@ -2,7 +2,7 @@ package kotak.loans.carloans;
 
 import java.util.Date;
 
-public abstract class A 
+public  class A 
 {
 	public int x = 10;
 	public final static String cname = "dell";
@@ -29,7 +29,7 @@ public abstract class A
 		System.out.println("iam dummy static block");
 	}
 	
-	public abstract void m5();
+	
 
 	public static void main(String[] args) 
 	{
