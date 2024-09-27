@@ -8,6 +8,7 @@ public class ICICI implements Rbi
 		ICICI i = new ICICI();
 		i.deposit();
 		i.withdrawl();
+		i.ministatement();
 	}
 
 	@Override
@@ -18,6 +19,11 @@ public class ICICI implements Rbi
 	@Override
 	public void deposit() {
 		System.out.println("iam overriden deposit in ICICI");
+	}
+	
+	public void ministatement()
+	{
+		System.out.println("ICICI ministatement");
 	}
 
 }

@@ -8,6 +8,7 @@ public class HDFC implements Rbi
 		HDFC h = new HDFC();
 		h.deposit();
 		h.withdrawl();
+		h.ministatement();
 	}
 
 	@Override
@@ -18,6 +19,11 @@ public class HDFC implements Rbi
 	@Override
 	public void deposit() {
 		System.out.println("iam overriden deposit in HDFC");
+	}
+	
+	public void ministatement()
+	{
+		System.out.println("HDFC ministatement");
 	}
 
 }

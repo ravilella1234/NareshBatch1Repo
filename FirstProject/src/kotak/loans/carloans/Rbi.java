@@ -8,6 +8,23 @@ public interface Rbi
 	public void withdrawl();
 	public void deposit();
 	
+	public default void ministatement()
+	{
+		login();
+		savingAccount();
+		System.out.println("implement code");
+	}
+	
+	public static void savingAccount()
+	{
+		login();
+		System.out.println("static savingAccount");
+	}
+	
+	private static void login()
+	{
+		System.out.println("iam login");
+	}
 	
 	public static void main(String[] args) 
 	{
