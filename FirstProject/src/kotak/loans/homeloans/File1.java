@@ -14,8 +14,10 @@ public class File1
 		//FileInputStream fis1 = new FileInputStream("C:\\Users\\DELL\\Desktop\\text1.txt");
 		int asciiNum = 0;
 		while((asciiNum = fis.read()) != -1)
+		{
 			System.out.print((char)asciiNum);
-		
+			Thread.sleep(1000);
+		}
 		fis.close();
 	}
 

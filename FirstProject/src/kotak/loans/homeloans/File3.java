@@ -1,23 +1,21 @@
 package kotak.loans.homeloans;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.FileReader;
 
-public class File2 
+public class File3 
 {
 
 	public static void main(String[] args) throws Exception 
 	{
 		File f = new File("C:\\Users\\DELL\\Desktop\\text1.txt");
 		
-		Scanner sc = new Scanner(f);
-		while(sc.hasNextLine())
+		FileReader fr = new FileReader(f);
+		int asciiNum = 0; 
+		while((asciiNum = fr.read()) != -1)
 		{
-			System.out.println(sc.nextLine());
+			System.out.print((char)asciiNum);
 			Thread.sleep(1000);
 		}
-		sc.close();
 	}
-
 }
