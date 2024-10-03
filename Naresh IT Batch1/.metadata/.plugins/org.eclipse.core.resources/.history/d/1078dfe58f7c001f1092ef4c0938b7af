@@ -1,6 +1,0 @@
-package com.interfaces.pack;
-
-public abstract class Abs implements Laptop
-{
-
-}

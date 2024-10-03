@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;TwoDimenssionArray1.java&apos; to &apos;FirstProject/src/kotak.loans.eduloans&apos;&#x0D;&#x0A;- Original project: &apos;FirstProject&apos;&#x0D;&#x0A;- Destination element: &apos;FirstProject/src/kotak.loans.eduloans&apos;&#x0D;&#x0A;- Original element: &apos;kotak.loans.eduloans.TwoDimenssionArray1.java&apos;" description="Copy compilation unit" destination="/src&lt;kotak.loans.eduloans" element1="/src&lt;kotak.loans.eduloans{TwoDimenssionArray1.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1727246127354" units="1" version="1.0"/>
-</session>
