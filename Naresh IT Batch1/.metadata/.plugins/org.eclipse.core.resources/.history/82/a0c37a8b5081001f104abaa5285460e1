@@ -1,0 +1,13 @@
+package kotak.loans.homeloans;
+
+public class FileXmlReader 
+{
+
+	public static void main(String[] args) 
+	{
+		// DocumentBuilderFactory
+		// DocumentBuilder
+		// Document
+	}
+
+}

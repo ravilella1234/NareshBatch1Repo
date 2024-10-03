@@ -1,0 +1,18 @@
+package com.interfaces.pack;
+
+public class Demo1 extends Demo
+{
+
+	 void Demo1()
+	{
+		
+	}
+	
+	public static void main(String[] args) 
+	{
+		String str = "Java";
+		str.concat("is awesome");
+		System.out.println(str);
+	}
+
+}

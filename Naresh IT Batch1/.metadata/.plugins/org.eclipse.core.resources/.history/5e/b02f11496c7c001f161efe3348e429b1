@@ -1,0 +1,5 @@
+package com.interfaces.pack;
+
+public interface Laptop {
+
+}

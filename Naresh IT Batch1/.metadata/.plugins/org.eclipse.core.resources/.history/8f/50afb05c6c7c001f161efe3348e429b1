@@ -1,0 +1,10 @@
+package com.interfaces.pack;
+
+public interface Laptop 
+{
+	int i;
+	
+	public void copy();
+	
+
+}

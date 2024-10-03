@@ -1,0 +1,25 @@
+package kotak.loans.homeloans;
+
+import java.io.File;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+
+public class FileXmlReader 
+{
+
+	public static void main(String[] args) 
+	{
+		// DocumentBuilderFactory
+		// DocumentBuilder
+		// Document
+		
+		File f = new File("file:/C:/Users/DELL/Desktop/employee.xml");
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document document = db.parse(file);
+	}
+
+}

@@ -1,0 +1,15 @@
+package kotak.loans.homeloans;
+
+import java.io.File;
+
+public class File3 
+{
+
+	public static void main(String[] args) 
+	{
+		File f = new File("C:\\Users\\DELL\\Desktop\\text1.txt");
+		
+
+	}
+
+}

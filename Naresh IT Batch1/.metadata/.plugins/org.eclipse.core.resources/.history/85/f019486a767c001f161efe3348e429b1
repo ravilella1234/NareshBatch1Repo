@@ -1,0 +1,25 @@
+package com.interfaces.pack;
+
+public class Student 
+{
+	int rollNumber;
+	String name;
+	boolean isAttended;
+	
+	public Student(int rollNumber) {
+		super();
+		this.rollNumber = rollNumber;
+	}
+
+	public boolean isAttended() {
+		return isAttended;
+	}
+
+	public void setAttended(boolean isAttended) {
+		this.isAttended = isAttended;
+	}
+	
+	
+	
+
+}
