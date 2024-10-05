@@ -30,6 +30,10 @@ public class ExceptionDemo
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} 
+			finally 
+			{
+				System.out.println("iam final block...");
+			}
 			
 			
 		}
