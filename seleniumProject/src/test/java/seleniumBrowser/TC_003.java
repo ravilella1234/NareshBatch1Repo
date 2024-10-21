@@ -13,7 +13,7 @@ public class TC_003 extends BaseTest
 		
 		selectDropDown("amazondropbox_id","Books");
 		
-		typeText("amazonsearchtextbox_id","Harry Potter");
+		typeText("amazonsearchtextbox_name","Harry Potter");
 		
 		clickElement("amazonsearchbutton_xpath");
 		
