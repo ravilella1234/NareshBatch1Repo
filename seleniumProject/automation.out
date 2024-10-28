@@ -1,0 +1,6 @@
+init the properties files
+Launced the browser :  chrome
+Navigated to url : https://www.amazon.in/
+Selected the option from dropbox By uSing the locator : amazondropbox_id
+Entered the text by using locator : amazonsearchtextbox_name
+Clicked on ELement Byusing locator : amazonsearchbutton_xpath
