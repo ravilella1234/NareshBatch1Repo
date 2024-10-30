@@ -5,7 +5,7 @@ public class TC_002 extends BaseTest
 
 	public static void main(String[] args) throws Exception 
 	{
-		init();
+		init("chromebrowser");
 		
 		launch("firefoxbrowser");
 		

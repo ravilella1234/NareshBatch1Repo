@@ -11,9 +11,9 @@ public class TC_004 extends BaseTest
 	public static void main(String[] args) throws Exception 
 	{
 		
-		init();
+		init("chromebrowser");
 		
-		launch("chromebrowser");
+	
 		
 		navigateUrl("amazonurl");
 		

@@ -7,11 +7,10 @@ public class TC_005 extends BaseTest
 	
 	public static void main(String[] args) throws Exception 
 	{
-		init();
+		init("chromebrowser");
 		test = report.createTest("TC_005");
 		test.log(Status.INFO, "init the properties files");
-				
-		launch("chromebrowser");
+		
 		test.log(Status.INFO, "Launced the browser :  " + p.getProperty("chromebrowser"));
 		
 		navigateUrl("amazonurl");

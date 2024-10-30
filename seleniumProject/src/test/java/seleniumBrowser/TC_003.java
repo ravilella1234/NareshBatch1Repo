@@ -8,10 +8,10 @@ public class TC_003 extends BaseTest
 
 	public static void main(String[] args) throws Exception 
 	{
-		init();
+		init("chromebrowser");
 		log.info("init the properties files");
 		
-		launch("chromebrowser");
+		
 		log.info("Launced the browser :  " + p.getProperty("chromebrowser"));
 		
 		navigateUrl("amazonurl");

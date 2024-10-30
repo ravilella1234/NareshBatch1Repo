@@ -4,20 +4,26 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.time.Duration;
+import java.util.Date;
 import java.util.Properties;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -33,7 +39,7 @@ public class BaseTest
 	public static ExtentReports report;
 	public static ExtentTest test;
 	
-	public static void init() throws Exception
+	public static void init(String browserType) throws Exception
 	{
 		f = new File(".\\src\\test\\resources\\data.properties");
 		fis = new FileInputStream(f);
@@ -64,6 +70,8 @@ public class BaseTest
 		f = new File(".\\src\\test\\resources\\log4jconfig.properties");
 		fis = new FileInputStream(f);
 		PropertyConfigurator.configure(fis);
+		
+		launch(browserType);
 		
 		report = ExtentManager.getInstance();
 	}
@@ -192,5 +200,33 @@ public class BaseTest
 		
 	}
 	
+	public static void reportSuccess(String successMessage) 
+	{
+		test.log(Status.PASS, successMessage);
+	}
+
+	public static void reportFailure(String failureMessage) throws Exception 
+	{
+		test.log(Status.FAIL, failureMessage);
+		takesScreenshot();
+	}
+	
+	public static void takesScreenshot() throws Exception
+	{
+		Date dt=new Date();
+		System.out.println(dt);
+		String dateFormat=dt.toString().replace(":", "_").replace(" ", "_")+".png";		
+		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
+		FileHandler.copy(scrFile, new File(System.getProperty("user.dir")+"//failurescreenshots//"+dateFormat));
+		
+		test.log(Status.INFO,"Screenshot --->" +test.addScreenCaptureFromPath(System.getProperty("user.dir")+"//failurescreenshots//"+dateFormat));
+	}
+	
+	public static void drawBorder(WebElement element, WebDriver driver) 
+	{
+		JavascriptExecutor js = ((JavascriptExecutor) driver);
+		js.executeScript("arguments[0].style.border='3px solid red'", element);
+	}
 	
 }

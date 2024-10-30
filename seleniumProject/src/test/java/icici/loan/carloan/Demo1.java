@@ -2,12 +2,19 @@ package icici.loan.carloan;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.Set;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.RemoteWebDriverBuilder;
+
+import io.github.bonigarcia.wdm.webdriver.WebDriverBrowser;
 import seleniumBrowser.Functionalities;
 
 public class Demo1 
 {
-
+	public static WebDriver driver;
+	
 	public String[] getProjectName(String projectpath)
 	{
 		File f = new File(projectpath);
@@ -30,20 +37,19 @@ public class Demo1
 	{
 		String packName = this.getClass().getPackageName();
 		String[] sString = packName.split("\\.");
-		for(int i=0;i<sString.length;i++)
-		{
-			if(!sString[i].equals(sString.length-1))
-			{
-				System.out.println(sString[i]);
-			}	
-		}
-		return sString;
+		if(sString.length>2)
+			return sString[2];
+		else
+			return "The 2nd index does not exist in the string";
+				
 	}
 	
 	public static void main(String[] args) 
 	{
 		
 		Demo1 obj = new Demo1();
+		System.out.println(System.getProperty("user.dir"));
+		
 		String[] val = obj.getProjectName(System.getProperty("user.dir"));
 		System.out.println(Arrays.toString(val));
 		
@@ -51,7 +57,11 @@ public class Demo1
 		
 		System.out.println(obj.getCurrentPackageName());
 		
-		obj.getSplittedPackageName();
+		System.out.println(obj.getSplittedPackageName());
+		
+		
+		
 	}
+	
 
 }

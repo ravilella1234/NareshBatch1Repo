@@ -1,10 +1,12 @@
 package seleniumBrowser;
 
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentManager 
+public class ExtentManager extends BaseTest
 {
 	public static ExtentHtmlReporter htmlReport;
 	public static ExtentReports report;
@@ -23,7 +25,10 @@ public class ExtentManager
 			report.setSystemInfo("OS", System.getProperty("os.name"));
 			report.setSystemInfo("OS Version", System.getProperty("os.version"));
 			report.setSystemInfo("TesterName", System.getProperty("user.name"));
-			report.setSystemInfo("Browser", "Chrome");
+			report.setSystemInfo("Browser", ((RemoteWebDriver)driver).getCapabilities().getBrowserName());
+			//report.setSystemInfo("Browser", p.getProperty("chromebrowser"));
+			report.setSystemInfo("Browser Version", ((RemoteWebDriver)driver).getCapabilities().getBrowserVersion());
+			report.setSystemInfo("Environment", mainProp.getProperty("env"));
 		}
 		
 		
