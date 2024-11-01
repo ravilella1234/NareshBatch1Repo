@@ -205,17 +205,19 @@ public class BaseTest
 		test.log(Status.PASS, successMessage);
 	}
 
-	public static void reportFailure(String failureMessage) throws Exception 
+	public static void reportFailure(String failureMessage,WebElement element) throws Exception 
 	{
 		test.log(Status.FAIL, failureMessage);
-		takesScreenshot();
+		takesScreenshot(element);
 	}
 	
-	public static void takesScreenshot() throws Exception
+	public static void takesScreenshot(WebElement element) throws Exception
 	{
 		Date dt=new Date();
 		System.out.println(dt);
 		String dateFormat=dt.toString().replace(":", "_").replace(" ", "_")+".png";		
+		
+		drawBorder(element, driver);
 		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
 		FileHandler.copy(scrFile, new File(System.getProperty("user.dir")+"//failurescreenshots//"+dateFormat));
@@ -226,7 +228,7 @@ public class BaseTest
 	public static void drawBorder(WebElement element, WebDriver driver) 
 	{
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
-		js.executeScript("arguments[0].style.border='3px solid red'", element);
+		js.executeScript("arguments[0].style.border='5px solid yellow'", element);
 	}
 	
 }
