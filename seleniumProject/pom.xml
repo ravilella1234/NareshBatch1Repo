@@ -35,11 +35,7 @@
 	</dependency>
 
 
-	<dependency>
-		<groupId>automationProject</groupId>
-		<artifactId>May2024_7AM_SeleniumBatch</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
+	
   </dependencies>
   
 </project>
