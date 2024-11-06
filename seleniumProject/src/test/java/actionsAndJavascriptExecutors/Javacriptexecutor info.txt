@@ -1,0 +1,21 @@
+s
+W
+@
+
+What is JavascriptExecutor ?
+HoW to find the elements in Web page using JavascriptExecutor ?
+HoW to enter the text using JavascriptExecutor ?
+HoW to perform click operation using JavascriptExecutor ?
+HoW to highlight element using JavascriptExecutor ?
+HoW to perform scroll operations using JavascriptExecutor ?
+
+
+id - document.getElementById('email').value='ravilella'
+name - document.getElementsByName('email')[0];
+classname - document.getElementsByClassName('inputtext')[0];
+tagname - document.getElementsByTagName('input')[2];
+
+css selector - document.querySelector('#email');
+
+xpath - document.evaluate("//input[@id='email']",document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue;
+
