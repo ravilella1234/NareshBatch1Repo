@@ -13,8 +13,6 @@ public class TC_004 extends BaseTest
 		
 		init("chromebrowser");
 		
-	
-		
 		navigateUrl("amazonurl");
 		
 		//driver.findElement(By.id("searchDropdownBox")).sendKeys("Books");

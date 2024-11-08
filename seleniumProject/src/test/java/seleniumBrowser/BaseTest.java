@@ -2,7 +2,6 @@ package seleniumBrowser;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.time.Duration;
 import java.util.Date;
 import java.util.Properties;
@@ -39,7 +38,7 @@ public class BaseTest
 	public static ExtentReports report;
 	public static ExtentTest test;
 	
-	public static void init(String browserType) throws Exception
+	public  void init(String browserType) throws Exception
 	{
 		f = new File(".\\src\\test\\resources\\data.properties");
 		fis = new FileInputStream(f);
@@ -74,27 +73,38 @@ public class BaseTest
 		launch(browserType);
 		
 		report = ExtentManager.getInstance();
+		test = report.createTest(cName());
+		test.log(Status.INFO, "init the properties files");
+		//test.log(Status.INFO, "Launced the browser :  " + p.getProperty("chromebrowser"));
+		test.log(Status.INFO, "Launced the browser :  " + browserType);
+	}
+	
+	public String cName()
+	{
+		return this.getClass().getSimpleName();
 	}
 	
 	public static void launch(String browserType)
 	{
-		if(p.getProperty(browserType).equalsIgnoreCase("chrome")){
+		if(browserType.equalsIgnoreCase("chrome")){
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		}else if(p.getProperty(browserType).equalsIgnoreCase("firefox")){
+		}else if(browserType.equalsIgnoreCase("firefox")){
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-		}else if(p.getProperty(browserType).equals("edge")){
+		}else if(browserType.equals("edge")){
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
 		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
 	}
 	
 	public static void navigateUrl(String url)
 	{
 		//driver.get(url);
 		driver.navigate().to(childProp.getProperty(url));
+		test.log(Status.INFO, "Navigated to url : "+ driver.getCurrentUrl());
 	}
 	
 	public static void clickElement(String locatorKey) 

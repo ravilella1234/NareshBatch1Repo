@@ -7,14 +7,15 @@ public class TC_005 extends BaseTest
 	
 	public static void main(String[] args) throws Exception 
 	{
-		init("chromebrowser");
+		BaseTest obj = new BaseTest();
+		obj.init("chromebrowser");
 		test = report.createTest("TC_005");
 		test.log(Status.INFO, "init the properties files");
 		
 		test.log(Status.INFO, "Launced the browser :  " + p.getProperty("chromebrowser"));
 		
 		navigateUrl("amazonurl");
-		test.log(Status.PASS, "Navigated to url : "+ childProp.getProperty("amazonurl"));
+		//test.log(Status.PASS, "Navigated to url : "+ childProp.getProperty("amazonurl"));
 		
 		selectDropDown("amazondropbox_id","Books");
 		test.log(Status.FAIL, "Selected the option from dropbox By uSing the locator : " + "amazondropbox_id");

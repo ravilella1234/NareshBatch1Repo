@@ -6,15 +6,15 @@ import org.apache.hc.core5.http.io.HttpServerRequestHandler;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-public class BroName extends BaseTest
+public class BroName 
 {
 	
 	public static void main(String[] args) throws Exception 
 	{
-			init("chromebrowser");
+		BaseTest obj = new BaseTest();
+		obj.init("chromebrowser");
 			
 			
-		
 		   Set<String> cap = ((RemoteWebDriver)driver).getCapabilities().getCapabilityNames();
 		   
 		   for(String c:cap)
