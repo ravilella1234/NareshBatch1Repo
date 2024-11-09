@@ -36,6 +36,18 @@ public class TNG_002 extends BaseTest
 	  clickElement("amazonsearchbutton_xpath");
 	  test.log(Status.PASS, "Clicked on ELement Byusing locator : "+ "amazonsearchbutton_xpath");
   }
+  
+  @Test
+  public void amazonTest1()
+  {
+	  System.out.println("amazonTest1");
+  }
+  
+  @Test
+  public void amazonTest2()
+  {
+	  System.out.println("amazonTest2");
+  }
 
   @AfterMethod
   public void endProcess() 

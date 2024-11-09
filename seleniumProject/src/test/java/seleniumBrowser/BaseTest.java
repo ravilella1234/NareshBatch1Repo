@@ -98,6 +98,7 @@ public class BaseTest
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		System.out.println(browserType + Thread.currentThread().getId());
 	}
 	
 	public static void navigateUrl(String url)

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="TestNGSuite">
+<suite name="TestNGSuite" parallel="tests">
 
   <test thread-count="5" name="chromeTest">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="testNGpack.LinksTesting1"/>
       <class name="testNGpack.RadioButton1"/>
-      <class name="testNGpack.TNG_002"/>
+      <class name="testNGpack.TNG_002">
+      	<methods>
+      		<include name="amazonTest"></include>
+      	</methods>
+      </class>
       <class name="testNGpack.CheckBox1"/>
     </classes>
   </test> <!-- TestNGTest -->
