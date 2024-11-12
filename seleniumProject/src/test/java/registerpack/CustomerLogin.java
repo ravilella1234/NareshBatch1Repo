@@ -5,25 +5,25 @@ import org.testng.annotations.Test;
 public class CustomerLogin 
 {
 	
-  @Test
+  @Test(groups = {"smoke","Regression","Login","All"})
   public void loginwithValidCredientials() 
   {
 	  System.out.println("CustomerLogin - loginwithValidCredientials : "+ Thread.currentThread().getId());
   }
   
-  @Test
+  @Test(groups = {"smoke","Login","All"})
   public void loginwithInvalidValidUser() 
   {
 	  System.out.println("CustomerLogin - loginwithInvalidValidUser : "+ Thread.currentThread().getId());
   }
   
-  @Test
+  @Test(groups = {"Login","Regression","All"})
   public void loginwithInvalidPassword() 
   {
 	  System.out.println("CustomerLogin - loginwithInvalidPassword : "+ Thread.currentThread().getId());
   }
   
-  @Test
+  @Test(groups = {"sanity","Login","All"})
   public void loginwithBlankCredientials() 
   {
 	  System.out.println("CustomerLogin - loginwithBlankCredientials : "+ Thread.currentThread().getId());

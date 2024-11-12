@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGpack.CheckBox1">
+      <class name="testNGpack.OneTestOutputAsInput">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="checkboxTest"/>
-          <include name="afterMethod"/>
+          <include name="a" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testNGpack.CheckBox1 -->
+      </class> <!-- testNGpack.OneTestOutputAsInput -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
