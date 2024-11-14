@@ -1,24 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results retried="3" ignored="0" total="7" passed="1" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-13T12:35:12 IST" name="Default suite" finished-at="2024-11-13T12:35:29 IST" duration-ms="17423">
+  <suite started-at="2024-11-14T12:48:38 IST" name="Default suite" finished-at="2024-11-14T12:48:39 IST" duration-ms="1230">
     <groups>
+      <group name="All">
+        <method signature="CustomerRegistration.registerwithDuplicateEmail()[pri:3, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithDuplicateEmail" class="registerpack.CustomerRegistration"/>
+        <method signature="CustomerRegistration.registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithallfields" class="registerpack.CustomerRegistration"/>
+        <method signature="CustomerRegistration.registerwithValidEmail()[pri:4, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithValidEmail" class="registerpack.CustomerRegistration"/>
+        <method signature="CustomerRegistration.registerwithMandatfields()[pri:1, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithMandatfields" class="registerpack.CustomerRegistration"/>
+      </group> <!-- All -->
+      <group name="Register">
+        <method signature="CustomerRegistration.registerwithDuplicateEmail()[pri:3, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithDuplicateEmail" class="registerpack.CustomerRegistration"/>
+        <method signature="CustomerRegistration.registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithallfields" class="registerpack.CustomerRegistration"/>
+        <method signature="CustomerRegistration.registerwithValidEmail()[pri:4, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithValidEmail" class="registerpack.CustomerRegistration"/>
+        <method signature="CustomerRegistration.registerwithMandatfields()[pri:1, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithMandatfields" class="registerpack.CustomerRegistration"/>
+      </group> <!-- Register -->
+      <group name="Regression">
+        <method signature="CustomerRegistration.registerwithValidEmail()[pri:4, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithValidEmail" class="registerpack.CustomerRegistration"/>
+        <method signature="CustomerRegistration.registerwithMandatfields()[pri:1, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithMandatfields" class="registerpack.CustomerRegistration"/>
+      </group> <!-- Regression -->
+      <group name="smoke">
+        <method signature="CustomerRegistration.registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithallfields" class="registerpack.CustomerRegistration"/>
+        <method signature="CustomerRegistration.registerwithMandatfields()[pri:1, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithMandatfields" class="registerpack.CustomerRegistration"/>
+      </group> <!-- smoke -->
+      <group name="sanity">
+        <method signature="CustomerRegistration.registerwithDuplicateEmail()[pri:3, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithDuplicateEmail" class="registerpack.CustomerRegistration"/>
+      </group> <!-- sanity -->
+      <group name="Regresion">
+        <method signature="CustomerRegistration.registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a]" name="registerwithallfields" class="registerpack.CustomerRegistration"/>
+      </group> <!-- Regresion -->
     </groups>
-    <test started-at="2024-11-13T12:35:12 IST" name="Default test" finished-at="2024-11-13T12:35:29 IST" duration-ms="17423">
-      <class name="assertionpack.SoftAssertionTest3">
-        <test-method signature="f()[pri:0, instance:assertionpack.SoftAssertionTest3@1e04fa0a]" started-at="2024-11-13T12:35:12 IST" name="f" finished-at="2024-11-13T12:35:29 IST" duration-ms="17341" status="FAIL">
+    <test started-at="2024-11-14T12:48:38 IST" name="Default test" finished-at="2024-11-14T12:48:39 IST" duration-ms="1230">
+      <class name="registerpack.CustomerRegistration">
+        <test-method signature="registerwithMandatfields()[pri:1, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:38 IST" name="registerwithMandatfields" finished-at="2024-11-14T12:48:38 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerwithMandatfields -->
+        <test-method is-config="true" signature="endProcess(org.testng.ITestResult)[pri:0, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:38 IST" name="endProcess" finished-at="2024-11-14T12:48:38 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerwithMandatfields status=SUCCESS method=CustomerRegistration.registerwithMandatfields()[pri:1, instance:registerpack.CustomerRegistration@5ba3f27a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+        <test-method retried="true" signature="registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:38 IST" name="registerwithallfields" finished-at="2024-11-14T12:48:38 IST" duration-ms="8" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The following asserts failed:
-Both urls are not equal... expected [true] but found [false]]]>
+              <![CDATA[registerwithallfields has failed]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Both urls are not equal... expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-at assertionpack.SoftAssertionTest3.f(SoftAssertionTest3.java:49)
+              <![CDATA[java.lang.AssertionError: registerwithallfields has failed
+at org.testng.Assert.fail(Assert.java:99)
+at registerpack.CustomerRegistration.registerwithallfields(CustomerRegistration.java:28)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -52,8 +90,262 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- assertionpack.SoftAssertionTest3 -->
+        </test-method> <!-- registerwithallfields -->
+        <test-method is-config="true" signature="endProcess(org.testng.ITestResult)[pri:0, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:38 IST" name="endProcess" finished-at="2024-11-14T12:48:38 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerwithallfields status=SKIP method=CustomerRegistration.registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+        <test-method retried="true" signature="registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:38 IST" name="registerwithallfields" finished-at="2024-11-14T12:48:38 IST" duration-ms="8" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[registerwithallfields has failed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: registerwithallfields has failed
+at org.testng.Assert.fail(Assert.java:99)
+at registerpack.CustomerRegistration.registerwithallfields(CustomerRegistration.java:28)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerwithallfields -->
+        <test-method is-config="true" signature="endProcess(org.testng.ITestResult)[pri:0, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:38 IST" name="endProcess" finished-at="2024-11-14T12:48:38 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerwithallfields status=SKIP method=CustomerRegistration.registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+        <test-method retried="true" signature="registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:38 IST" name="registerwithallfields" finished-at="2024-11-14T12:48:38 IST" duration-ms="6" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[registerwithallfields has failed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: registerwithallfields has failed
+at org.testng.Assert.fail(Assert.java:99)
+at registerpack.CustomerRegistration.registerwithallfields(CustomerRegistration.java:28)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerwithallfields -->
+        <test-method signature="registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:38 IST" name="registerwithallfields" finished-at="2024-11-14T12:48:38 IST" duration-ms="5" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[registerwithallfields has failed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: registerwithallfields has failed
+at org.testng.Assert.fail(Assert.java:99)
+at registerpack.CustomerRegistration.registerwithallfields(CustomerRegistration.java:28)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerwithallfields -->
+        <test-method is-config="true" signature="endProcess(org.testng.ITestResult)[pri:0, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:38 IST" name="endProcess" finished-at="2024-11-14T12:48:38 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerwithallfields status=SKIP method=CustomerRegistration.registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+        <test-method is-config="true" signature="endProcess(org.testng.ITestResult)[pri:0, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:38 IST" name="endProcess" finished-at="2024-11-14T12:48:38 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerwithallfields status=FAILURE method=CustomerRegistration.registerwithallfields()[pri:2, instance:registerpack.CustomerRegistration@5ba3f27a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+        <test-method signature="registerwithDuplicateEmail()[pri:3, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:38 IST" name="registerwithDuplicateEmail" finished-at="2024-11-14T12:48:39 IST" duration-ms="1024" status="FAIL">
+          <exception class="org.testng.internal.thread.ThreadTimeoutException">
+            <message>
+              <![CDATA[Method registerpack.CustomerRegistration.registerwithDuplicateEmail() didn't finish within the time-out 1000]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.thread.ThreadTimeoutException: Method registerpack.CustomerRegistration.registerwithDuplicateEmail() didn't finish within the time-out 1000
+at org.testng.internal.MethodInvocationHelper.invokeWithTimeoutWithNewExecutor(MethodInvocationHelper.java:384)
+at org.testng.internal.MethodInvocationHelper.invokeWithTimeout(MethodInvocationHelper.java:283)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:604)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.thread.ThreadTimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerwithDuplicateEmail -->
+        <test-method is-config="true" signature="endProcess(org.testng.ITestResult)[pri:0, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:39 IST" name="endProcess" finished-at="2024-11-14T12:48:39 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=registerwithDuplicateEmail status=FAILURE method=CustomerRegistration.registerwithDuplicateEmail()[pri:3, instance:registerpack.CustomerRegistration@5ba3f27a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+        <test-method signature="registerwithValidEmail()[pri:4, instance:registerpack.CustomerRegistration@5ba3f27a]" started-at="2024-11-14T12:48:39 IST" name="registerwithValidEmail" finished-at="2024-11-14T12:48:39 IST" depends-on-methods="registerpack.CustomerRegistration.registerwithallfields" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CustomerRegistration.registerwithValidEmail()[pri:4, instance:registerpack.CustomerRegistration@5ba3f27a] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CustomerRegistration.registerwithValidEmail()[pri:4, instance:registerpack.CustomerRegistration@5ba3f27a] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerwithValidEmail -->
+      </class> <!-- registerpack.CustomerRegistration -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

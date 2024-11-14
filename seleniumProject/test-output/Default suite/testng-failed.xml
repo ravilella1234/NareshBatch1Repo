@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="assertionpack.SoftAssertionTest3">
+      <class name="registerpack.CustomerRegistration">
         <methods>
-          <include name="f"/>
+          <include name="registerwithValidEmail"/>
+          <include name="registerwithallfields"/>
+          <include name="endProcess"/>
+          <include name="registerwithDuplicateEmail"/>
         </methods>
-      </class> <!-- assertionpack.SoftAssertionTest3 -->
+      </class> <!-- registerpack.CustomerRegistration -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

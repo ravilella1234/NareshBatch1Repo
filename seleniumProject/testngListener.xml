@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	
+	<listeners>
+		<listener class-name="testNGlistener.MyListener"></listener>
+		<listener class-name="testNGlistener.RetryAnalyzer"></listener>
+	</listeners>
+
+  <test thread-count="5" name="RegistrationTest">
+    <classes>
+      <class name="registerpack.CustomerRegistration"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="LoginTest">
+    <classes>
+      <class name="registerpack.CustomerLogin"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="SearchTest">
+    <classes>
+      <class name="registerpack.SearchOperarions"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
