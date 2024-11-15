@@ -4,7 +4,7 @@
 	
 	<listeners>
 		<listener class-name="testNGlistener.MyListener"></listener>
-		<listener class-name="testNGlistener.RetryAnalyzer"></listener>
+		<listener class-name="testNGlistener.RetryListener"></listener>
 	</listeners>
 
   <test thread-count="5" name="RegistrationTest">

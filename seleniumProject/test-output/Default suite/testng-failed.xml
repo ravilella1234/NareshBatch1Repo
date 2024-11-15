@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="registerpack.CustomerRegistration">
+      <class name="testNGDataProviderpack.UserClass">
         <methods>
-          <include name="registerwithValidEmail"/>
-          <include name="registerwithallfields"/>
-          <include name="endProcess"/>
-          <include name="registerwithDuplicateEmail"/>
+          <include name="f" invocation-numbers="1"/>
         </methods>
-      </class> <!-- registerpack.CustomerRegistration -->
+      </class> <!-- testNGDataProviderpack.UserClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

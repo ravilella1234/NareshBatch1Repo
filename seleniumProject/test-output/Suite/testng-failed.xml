@@ -3,6 +3,7 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="testNGlistener.MyListener"/>
+    <listener class-name="testNGlistener.RetryListener"/>
   </listeners>
   <test thread-count="5" name="RegistrationTest(failed)">
     <classes>
@@ -10,6 +11,7 @@
         <methods>
           <include name="registerwithValidEmail"/>
           <include name="registerwithallfields"/>
+          <include name="endProcess"/>
           <include name="registerwithDuplicateEmail"/>
         </methods>
       </class> <!-- registerpack.CustomerRegistration -->

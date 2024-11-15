@@ -21,7 +21,7 @@ public class CustomerRegistration
 	  System.out.println("CustomerRegistration - registerwithMandatfields : " + Thread.currentThread().getId());
   }
   
-  @Test(priority = 2, groups = {"smoke","Regresion","Register","All"})
+  @Test(priority = 2, groups = {"smoke","Regresion","Register","All"}) //retryAnalyzer = RetryAnalyzer.class
   public void registerwithallfields() 
   {
 	  System.out.println("CustomerRegistration - registerwithallfields : "+ Thread.currentThread().getId());
