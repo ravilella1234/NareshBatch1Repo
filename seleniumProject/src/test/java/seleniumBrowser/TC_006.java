@@ -10,9 +10,9 @@ public class TC_006 extends BaseTest
 
 	public static void main(String[] args) throws Exception 
 	{
-		init("chromebrowser");
-		test = report.createTest("TC_006");
-		test.log(Status.INFO, "init the properties files");
+		BaseTest obj = new BaseTest();
+		obj.init("chromebrowser");
+		
 		
 		test.log(Status.INFO, "Launced the browser :  " + p.getProperty("chromebrowser"));
 		

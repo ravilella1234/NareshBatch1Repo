@@ -8,9 +8,8 @@ public class TC_003 extends BaseTest
 
 	public static void main(String[] args) throws Exception 
 	{
-		init("chromebrowser");
-		log.info("init the properties files");
-		
+		BaseTest obj = new BaseTest();
+		obj.init("chromebrowser");
 		
 		log.info("Launced the browser :  " + p.getProperty("chromebrowser"));
 		

@@ -15,7 +15,8 @@ public class BroName
 		obj.init("chromebrowser");
 			
 			
-		   Set<String> cap = ((RemoteWebDriver)driver).getCapabilities().getCapabilityNames();
+		  
+		Set<String> cap = ((RemoteWebDriver)driver).getCapabilities().getCapabilityNames();
 		   
 		   for(String c:cap)
 		   {
