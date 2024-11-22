@@ -1,35 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-19T12:17:14 IST" name="Default suite" finished-at="2024-11-19T12:17:16 IST" duration-ms="1889">
+  <suite started-at="2024-11-22T12:41:32 IST" name="Default suite" finished-at="2024-11-22T12:41:40 IST" duration-ms="8517">
     <groups>
     </groups>
-    <test started-at="2024-11-19T12:17:14 IST" name="Default test" finished-at="2024-11-19T12:17:16 IST" duration-ms="1889">
-      <class name="excelDataDriven.DataManagementFinalVersion">
-        <test-method signature="f(java.util.Hashtable)[pri:0, instance:excelDataDriven.DataManagementFinalVersion@1de76cc7]" started-at="2024-11-19T12:17:16 IST" name="f" data-provider="getData" finished-at="2024-11-19T12:17:16 IST" duration-ms="13" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{ExpectedResult=LoginSuccuss, RunMode=Y, UserPassword=ravi2021, UserName=ravilella.2015@gmail.com, Browser=chrome}]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2024-11-22T12:41:32 IST" name="Default test" finished-at="2024-11-22T12:41:40 IST" duration-ms="8517">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.LoginTest@37d4349f]" started-at="2024-11-22T12:41:32 IST" name="beforeMethod" finished-at="2024-11-22T12:41:40 IST" duration-ms="7893" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="f()[pri:0, instance:tests.LoginTest@37d4349f]" started-at="2024-11-22T12:41:40 IST" name="f" finished-at="2024-11-22T12:41:40 IST" duration-ms="505" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.util.Hashtable)[pri:0, instance:excelDataDriven.DataManagementFinalVersion@1de76cc7]" started-at="2024-11-19T12:17:16 IST" name="f" data-provider="getData" finished-at="2024-11-19T12:17:16 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{ExpectedResult=LoginSuccuss, RunMode=N, UserPassword=password2, UserName=user2, Browser=firefox}]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.LoginTest@37d4349f]" started-at="2024-11-22T12:41:40 IST" name="afterMethod" finished-at="2024-11-22T12:41:40 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- excelDataDriven.DataManagementFinalVersion -->
+        </test-method> <!-- afterMethod -->
+      </class> <!-- tests.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
