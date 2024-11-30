@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<employees>
+
+  <employee>
+    <id>1</id>
+    <name>Upendra Roul</name>
+    <position>Software Developer</position>
+    <joinyear>2010</joinyear>
+    <salary>6000</salary>
+  </employee>
+
+  <employee>
+    <id>2</id>
+    <name>Jay Prakash</name>
+    <position>Testers</position>
+    <joinyear>2010</joinyear>
+    <salary>7000</salary>
+  </employee>
+
+  <employee>
+    <id>3</id>
+    <name>Rekha Sharma</name>
+    <position>HR</position>
+    <joinyear>2005</joinyear>
+    <salary>7000</salary>
+  </employee>
+
+  <employee>
+    <id>4</id>
+    <name>Rohit S</name>
+    <position>House Keeping</position>
+    <joinyear>2000</joinyear>
+    <salary>3000</salary>
+  </employee>
+</employees>
