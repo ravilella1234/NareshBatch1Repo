@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = ("@SmokeTest or @Regression"),
+@CucumberOptions(tags = "not @Registration",
                          plugin = {"pretty","html:target/cucumber-reports.html",
                          "json:target/cucumber-reports.json"},
                          monochrome = true
