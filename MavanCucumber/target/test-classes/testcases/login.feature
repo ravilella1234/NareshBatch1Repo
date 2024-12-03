@@ -1,3 +1,4 @@
+@all
 Feature: User Login  
   As a user, I want to log in to the application so that I can access my account.  
 
@@ -9,7 +10,8 @@ Background:
 		When The user enters valid email "<username>"
 		And Enter valid password "<password>"
  		And Clicks the login button  
-   	Then The user should be redirected to the dashboard  
+   	Then The user should be redirected to the dashboard 
+   	
     
     Examples:
     | username  | password  |
@@ -23,7 +25,8 @@ Background:
     When The user enters invalid email "ravilella@gmail.com"
     And Enter invalid password "ravi123456"
     And Clicks the login button  
-    Then An error message Invalid username or password should be displayed  
+    Then An error message Invalid username or password should be displayed 
+    But  The user should not goto addto cart page 
 
 @Regression @Login  @invalid-valid-credentials
   Scenario: Login with invalid user and valid password credentials  

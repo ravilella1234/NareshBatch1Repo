@@ -1,3 +1,4 @@
+@all
 Feature: User Registration
 
 @SmokeTest @Regression @Registration  @mandatory-fields

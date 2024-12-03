@@ -48,6 +48,8 @@ public class Login
 	@Then("user should get proper warning message")
 	public void user_should_get_proper_warning_message() {
 	    System.out.println("---> user has got proper warning message");
+//	    int x = 7/0;
+//	    System.out.println(x);
 	}
 		
 	
