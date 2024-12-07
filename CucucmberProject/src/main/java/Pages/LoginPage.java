@@ -3,9 +3,9 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage 
+public class LoginPage
 {
-	protected WebDriver driver;
+	private  WebDriver driver;	
 	
     private By usernameField = By.id("username");
     private By passwordField = By.id("password");
@@ -51,4 +51,8 @@ public class LoginPage
     	return driver.findElement(loginErorFiled).getText();
     }
 
+    public String getCurrentUrl()
+    {
+    	return driver.getCurrentUrl();
+    }
 }

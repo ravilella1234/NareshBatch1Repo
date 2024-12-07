@@ -1,28 +1,23 @@
 package steps;
 
-import java.time.Duration;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 import Pages.LoginPage;
-import io.cucumber.java.en.*;
+import browsersfactory.DriverFactory;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class LoginDemo1 
 {
-	protected WebDriver driver;
-	protected LoginPage loginPage;
-	
+    
+    private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
+
 	@Given("the user is on the login page")
 	public void the_user_is_on_the_login_page() 
 	{
-		driver = new ChromeDriver();
-		driver.get("https://practicetestautomation.com/practice-test-login/");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		loginPage = new LoginPage(driver);
+		//System.out.println(Thread.currentThread().getId());
+		DriverFactory.getDriver().get("https://practicetestautomation.com/practice-test-login/");
 	}
 
 	@When("the user enters {string} into the username field")
@@ -46,7 +41,7 @@ public class LoginDemo1
 	@Then("the new page URL should contain {string}")
 	public void the_new_page_url_should_contain(String expectedTitle) 
 	{
-		Assert.assertEquals(driver.getCurrentUrl(), expectedTitle);
+		Assert.assertEquals(loginPage.getCurrentUrl(), expectedTitle);
 	}
 
 	@Then("the new page should display text containing {string}")

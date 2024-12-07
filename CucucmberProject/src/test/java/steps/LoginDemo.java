@@ -1,16 +1,16 @@
-package steps;
+//package steps;
 
-import java.time.Duration;
+//import java.time.Duration;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//import org.testng.Assert;
 
-import io.cucumber.java.en.*;
+//import io.cucumber.java.en.*;
 
-public class LoginDemo 
-{
+//public class LoginDemo 
+//{
 //	protected WebDriver driver;
 //	
 //	@Given("the user is on the login page")
@@ -73,4 +73,4 @@ public class LoginDemo
 //		String actualErrText = driver.findElement(By.xpath("//div[@id='error']")).getText();
 //		Assert.assertEquals(actualErrText, expectedErrText);
 //	}
-}
+//}
