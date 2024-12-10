@@ -11,7 +11,11 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 					features = "src/test/resources/feature",
 					glue = {"steps","hooks"},
-					plugin = {"pretty","html:target/cucumber-reports.html"},
+					plugin = {"pretty",
+							  "html:target/cucumber-reports.html",
+							  "rerun:target/failedrerun.txt"
+							 },
+					//tags = "not @skip",
 					publish = true
 		        )
 
