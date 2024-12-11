@@ -1,6 +1,8 @@
 package assertionpack;
 
 import static org.testng.Assert.*;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class HardAssertionTest 
@@ -44,6 +46,7 @@ public class HardAssertionTest
 	 // assertNotNull(d, "The string D is NULL");
 	  
 	 // fail(a, null);
+	  
   }
   
 }

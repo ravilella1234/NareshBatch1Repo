@@ -35,11 +35,12 @@ public class Example4
 			Number n = nf.parse(cPrice);
 			String price = n.toString();
 			Double dPrice = Double.parseDouble(price);
-			
 			int iPrice = dPrice.intValue();
 			a.add(iPrice);
+			
+			//a.add(dPrice);
 			//System.out.println("loc :"+ loc);
-			//System.out.println(iPrice);
+			System.out.println(iPrice);
 			//System.out.println(a);
 		}
 		
