@@ -1,0 +1,58 @@
+ls
+pwd
+mkdir <Give foldername>
+cd
+git --version
+
+
+Git Commands
+------------
+init
+status
+add
+commit
+log
+config
+
+1) How to initialize Git File
+2) How to stage the Git files
+3) How to commit Git files in local Repository
+4) How to check the status of Github
+5) How to configure the Git file
+6) How to check the Git logs for changes
+
+git init
+git status
+git add a.txt b.txt
+git status
+git config --global user.email "ravilella.1981@gmail.com"
+git config --global user.name "ravilella1234"
+git commit -m "this is my first commit"
+git status
+git log
+Do some changes in the above files a.txt & b.txt
+git status
+git commit -a -m "both files are modified"
+git status
+git log
+
+1) How to clone repository from Git?
+2) How to Push code onto remote repository?
+3) How to Pull code changes from remote repository?
+
+git clone 'Give here your Remote repository Name'
+-To modify the existing file
+ls
+cat your filename
+vim your filename
+click on Insert Button in keyboard and edit the file and click on escape button  & type :wq
+Then we have to do staging  & commit
+git add .
+git commit -m "updated files"
+git log --oneline
+git push origin main
+git pull origin main
+cat filename
+
+
+
