@@ -3,6 +3,9 @@ pwd
 mkdir <Give foldername>
 cd
 git --version
+touch <filename>
+cat <filename>
+vim <filename>
 
 
 Git Commands
@@ -55,4 +58,86 @@ git pull origin main
 cat filename
 
 
+touch <filename>
+Use touch when you want to quickly create an empty file or update an existing file's timestamp.
+
+cat <filename>
+Use cat when you want to view the content of a file without editing it.
+
+vim <filename>
+Use vim when you need to edit, create, or manipulate the content of a file interactively.
+
+
+
+
+git checkout <filename>
+
+ls (Linux/Unix command) Purpose: Lists files and directories in a specified directory on your local file system.
+
+git ls-files (Git command) Purpose: Lists all files tracked by Git in the current repository.
+
+
+Remove files from both staging & working directory
+git rm <fileName> Purpose: Removes a specific file from the Git repository and the working directory.
+
+git rm -r .  Purpose: Recursively removes all files and directories in the current directory from the Git repository and the working directory.
+
+
+If you want to keep the file locally but remove it from Git, you can use the --cached flag
+git rm --cached <fileName>
+
+
+If you want to keep the files locally but remove them from Git, you can use the --cached
+git rm -r --cached .
+
+Remove files only from working Directory
+rm <filename>
+
+
+Git Branching Commands
+----------------------
+1) View available branchs
+     git branch
+     git status
+
+2) Create new branch
+     git branch <branch name>
+     git status
+
+3) How to Switch to the branch
+     git checkout <branch name>
+     git branch
+
+4) How to Create a new branch and Switch to branch
+     git checkout -b <branch name>
+     git status
+
+     touch <fileName1> <fileName2> <>...
+     ls
+     git add <fileName1>;git commit -m <fileName1>
+     git add <fileName2>;git commit -m <fileName2>
+     git ls-files
+
+
+Merging Branchs - Merging should happen while being in Master Branch
+
+1) Fast-forward Merge --> git merge <child branch name>
+2) Three-way Merge
+
+
+Merging conflicts
+-----------------
+git merge <child branch name>
+cat filename.txt
+vim filename.txt
+dd
+cat filename.txt
+git add filename.txt;git commit -m "commit message"
+git log --oneline
+git log --oneline --graph
+
+To delete the branch
+--------------------
+git branch
+git branch -d <name of Branch>
 
