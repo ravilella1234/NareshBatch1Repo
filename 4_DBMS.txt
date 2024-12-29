@@ -1,0 +1,213 @@
+DBMS ToolS
+-----------
+MySql
+SqlServer
+Oracle
+etc....
+
+SQL - Structured Query Language
+DataBase - Tables(structured DB) - Data (Rows & Columns) 
+
+CRUD Operations : Create, Read, Update, Delete
+
+Create DB
+Create Table
+Alter DB
+Alter Table
+Reading Data
+Update Data
+Delete DB
+Delete Table
+Delete Data
+
+SQL Commands :
+---------------
+Data Definition Language (DDL)
+	Create
+	Alter
+	Drop
+	Truncate
+
+Data Manipulation Language (DML)
+	Select
+	Update
+	Insert
+	Delete
+
+Data Control Language (DCL)
+	Grant
+	Revoke
+
+Transaction Control Language (TCL)
+	Commit
+	Rollback
+
+
+Create DataBase 
+---------------
+sql> Create database database_name;
+
+//Displays the databases in my sql
+sql> show databases;
+
+//Entering into database
+sql> use database_name;
+
+//Creating Table
+sql> Create table  table_name(eno datatype, 
+			      ename datatype, 
+			      sal datatype);
+
+sql> show tables;   // select * from tab;
+
+
+DataTypes in sql
+-----------------
+
+1) Binary - Images
+
+2) Numaric -
+       Approximate - Real, Float
+       Exact - bit, Tinyint, smallint, int, bigint, decimal
+
+3) String - char, varchar(), Text
+
+4) Date & Time - Date(YYY MM DD), Time(HH MM ss), DateTime (YYY MM DD HH MM ss)
+
+
+
+
+db operations
+-------------
+
+
+1. Data Definition Language (DDL)
+  
+
+Create a Database:
+CREATE DATABASE EmployeeDB;
+
+
+use EmployeeDB;
+
+Create a Table:
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Department VARCHAR(50),
+    Salary DECIMAL(10, 2)
+);
+
+
+Alter a Table:
+ALTER TABLE Employees ADD Age INT;
+
+Drop a Table:
+DROP TABLE Employees;
+
+
+
+2. Data Manipulation Language (DML)
+
+Insert Data:
+INSERT INTO Employees (EmployeeID, Name, Department, Salary)
+VALUES (1, 'John Doe', 'HR', 50000);
+
+
+Update Data:
+UPDATE Employees
+SET Salary = 55000
+WHERE EmployeeID = 1;
+
+
+Delete Data:
+DELETE FROM Employees
+WHERE EmployeeID = 1;
+
+
+3. Data Query Language (DQL)
+
+Retrieve All Data:
+SELECT * FROM Employees;
+
+
+Retrieve Specific Data:
+SELECT Name, Salary
+FROM Employees
+WHERE Department = 'HR';
+
+
+4. Data Control Language (DCL)
+
+Grant Permission:
+GRANT SELECT, INSERT ON Employees TO 'username';
+
+
+Revoke Permission:
+REVOKE INSERT ON Employees FROM 'username';
+
+
+5. Transaction Control Language (TCL)
+
+Commit Transaction:
+INSERT INTO Employees (EmployeeID, Name, Department, Salary)
+VALUES (2, 'Jane Smith', 'IT', 60000);
+
+COMMIT;
+
+
+Rollback Transaction:
+DELETE FROM Employees WHERE Department = 'HR';
+
+ROLLBACK;
+
+
+Savepoint:
+SAVEPOINT BeforeDelete;
+
+DELETE FROM Employees WHERE Department = 'Marketing';
+
+ROLLBACK TO BeforeDelete;
+
+
+6. Additional Commands (Clauses and Joins)
+
+Common Clauses:
+WHERE: Filters rows based on a condition.
+SELECT Name FROM Employees WHERE Salary > 50000;
+
+
+ORDER BY: Sorts results in ascending/descending order.
+SELECT Name, Salary FROM Employees ORDER BY Salary DESC;
+
+
+GROUP BY: Groups rows by a specific column.
+SELECT Department, SUM(Salary) AS TotalSalary FROM Employees GROUP BY Department;
+
+
+HAVING: Filters grouped data.
+SELECT Department, AVG(Salary) AS AvgSalary 
+FROM Employees 
+GROUP BY Department 
+HAVING AVG(Salary) > 60000;
+
+
+JOIN: Combines rows from multiple tables.
+SELECT e.Name, d.DepartmentName 
+FROM Employees e
+JOIN Departments d ON e.Department = d.DepartmentID;
+
+
+LIMIT: Limits the number of rows returned.
+SELECT * FROM Employees LIMIT 5;
+
+
+
+
+
+
+
+
+
+
+
