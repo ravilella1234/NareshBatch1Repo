@@ -17,13 +17,13 @@ public class SoftAssertionTest3
 {
 	
   @Test
-  public void f() 
+  public void f() throws InterruptedException 
   {
 	    WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.amazon.in/");
 		driver.manage().window().maximize();
-		
+		Thread.sleep(10000);
 		SoftAssert obj = new SoftAssert();
 		
 		
@@ -42,7 +42,7 @@ public class SoftAssertionTest3
 		
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Books", Keys.ENTER);
 		
-		obj.assertTrue(driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div/div[2]/div/div/div[1]/h2/a/span")).isDisplayed());
+		obj.assertTrue(driver.findElement(By.xpath("//h2[@class='a-size-medium a-spacing-none a-color-base a-text-normal']//span[contains(text(),'The Pursuit of Happiness: A Book of Studies and St')]")).isDisplayed());
 		
 		
 		

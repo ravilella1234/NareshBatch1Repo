@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AutomationSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="AutomationTest(failed)">
+    <classes>
+      <class name="testNGpack.TNG_002">
+        <methods>
+          <include name="endProcess"/>
+          <include name="amazonTest"/>
+          <include name="amazonTest1"/>
+          <include name="amazonTest2"/>
+          <include name="startProcess"/>
+        </methods>
+      </class> <!-- testNGpack.TNG_002 -->
+    </classes>
+  </test> <!-- AutomationTest(failed) -->
+</suite> <!-- Failed suite [AutomationSuite] -->
