@@ -25,11 +25,13 @@ public class ImageComparison
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.vmware.com/in.html");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		BufferedImage expectedImage = ImageIO.read(new File("C:\\Users\\DELL\\Desktop\\logos\\vmwarelogo.png"));
+		driver.get("https://www.redbus.in/");
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		WebElement logoElement = driver.findElement(By.xpath("//*[@id=\"header-explore\"]/div[3]/div/div/nav/div[1]/div/div[1]/a[1]/img"));
+		Thread.sleep(5000);
+		BufferedImage expectedImage = ImageIO.read(new File("C:\\Users\\DELL\\Desktop\\logos\\rdc-redbus-logo.png"));
+		
+		WebElement logoElement = driver.findElement(By.xpath("//img[@class='rb_logo']"));
 		
 		Screenshot logoImageScreenshot = new AShot().takeScreenshot(driver, logoElement);
 		BufferedImage actualImage = logoImageScreenshot.getImage();
