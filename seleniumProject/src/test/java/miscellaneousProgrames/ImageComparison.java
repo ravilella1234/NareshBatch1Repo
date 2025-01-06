@@ -10,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.yandex.qatools.ashot.AShot;
@@ -28,10 +30,15 @@ public class ImageComparison
 		driver.get("https://www.redbus.in/");
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement logoElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@class='rb_logo']")));
+
+		
 		BufferedImage expectedImage = ImageIO.read(new File("C:\\Users\\DELL\\Desktop\\logos\\rdc-redbus-logo.png"));
 		
-		WebElement logoElement = driver.findElement(By.xpath("//img[@class='rb_logo']"));
+		//WebElement logoElement = driver.findElement(By.xpath("//img[@class='rb_logo']"));
 		
 		Screenshot logoImageScreenshot = new AShot().takeScreenshot(driver, logoElement);
 		BufferedImage actualImage = logoImageScreenshot.getImage();
