@@ -1,5 +1,6 @@
 D:\Naresh IT Batch1\seleniumProject\src\test\java\actionsAndJavascriptExecutors\JavaScriptUtil.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\assertionpack\HardAssertionTest2.java
+D:\Naresh IT Batch1\seleniumProject\src\test\java\miscellaneousProgrames\BarCodeReader.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\seleniumBrowser\DateDemo.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\excelDataDriven\ExcelOperations.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\excelDataDriven\ExcelRowAndColoumnCount.java
@@ -11,6 +12,7 @@ D:\Naresh IT Batch1\seleniumProject\src\test\java\seleniumBrowser\Example2.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\icici\loan\carloan\DropBoxOptionSelection.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\testNGpack\CheckBox1.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\seleniumBrowser\Functionalities.java
+D:\Naresh IT Batch1\seleniumProject\src\test\java\miscellaneousProgrames\QRCodeReader.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\testNGpack\LinksTesting1.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\tests\LoginTest.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\icici\loan\carloan\FrameSwitch.java
@@ -20,6 +22,7 @@ D:\Naresh IT Batch1\seleniumProject\src\test\java\excelDataDriven\MajorMinorProg
 D:\Naresh IT Batch1\seleniumProject\src\test\java\assertionpack\HardAssertionTest.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\icici\loan\carloan\WindowSwitching2.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\excelDataDriven\ReadData.java
+D:\Naresh IT Batch1\seleniumProject\src\test\java\miscellaneousProgrames\TestCasewithEncriptedPassword.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\webDriverscreenshots\Selfy1.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\excelDataDriven\ExcelUtilTest.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\seleniumBrowser\TC_005.java
@@ -77,6 +80,7 @@ D:\Naresh IT Batch1\seleniumProject\src\test\java\seleniumBrowser\BroName.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\excelDataDriven\WriteDataByNumber.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\registerpack\SearchOperarions.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\excelDataDriven\WriteDataByName.java
+D:\Naresh IT Batch1\seleniumProject\src\test\java\miscellaneousProgrames\ImageComparison.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\optionDemo\ChromeOptionDemo.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\utils\WaitUtils.java
 D:\Naresh IT Batch1\seleniumProject\src\test\java\excelDataDriven\DataManagementwithDataprovider.java
